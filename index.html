@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Calculators and Tools</title>
+<meta name="description" content="29 free calculators and tools: finance, health, home improvement, business, and everyday utilities. No signup, instant answers.">
+<link rel="canonical" href="https://nehemiah313.github.io/factory-tools-directory/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Online Calculators and Tools">
+<meta property="og:description" content="29 free calculators: finance, health, home, business. No signup, instant answers.">
+<meta property="og:url" content="https://nehemiah313.github.io/factory-tools-directory/">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f7f8fa;color:#1a1d21;line-height:1.5}
+header{background:#0f2a43;color:#fff;padding:2.5rem 1rem 2rem;text-align:center}
+header h1{font-size:1.9rem;margin-bottom:.4rem}
+header p{opacity:.85;max-width:34rem;margin:0 auto}
+.searchwrap{max-width:40rem;margin:-1.2rem auto 0;padding:0 1rem;position:relative}
+#search{width:100%;padding:.8rem 1rem;font-size:1rem;border:1px solid #d5dae0;border-radius:.6rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+main{max-width:60rem;margin:0 auto;padding:2rem 1rem 3rem}
+.cat{margin-bottom:2.2rem}
+.cat h2{font-size:1.25rem;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:2px solid #0f2a43}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:.9rem}
+.card{background:#fff;border:1px solid #e2e6eb;border-radius:.6rem;padding:1rem 1.1rem;text-decoration:none;color:inherit;display:block;transition:box-shadow .15s}
+.card:hover{box-shadow:0 4px 14px rgba(15,42,67,.12)}
+.card h3{font-size:1.02rem;color:#0f2a43;margin-bottom:.25rem}
+.card p{font-size:.88rem;color:#5a626b}
+.hidden{display:none!important}
+.noresults{text-align:center;color:#5a626b;padding:2rem;display:none}
+footer{text-align:center;padding:2rem 1rem;color:#5a626b;font-size:.85rem;border-top:1px solid #e2e6eb}
+footer a{color:#0f2a43}
+</style>
+</head>
+<body>
+<header>
+<h1>Free Online Calculators and Tools</h1>
+<p>29 fast, free tools for money, health, home projects, business, and everyday questions. No signup, answers in seconds.</p>
+</header>
+<div class="searchwrap">
+<input id="search" type="search" placeholder="Search tools..." aria-label="Search tools" autocomplete="off">
+</div>
+<main id="main"></main>
+<div class="noresults" id="noresults">No tools match your search.</div>
+<footer>
+<p>Questions? <a href="mailto:n.harvard@aitechpros.ai">n.harvard@aitechpros.ai</a></p>
+</footer>
+<script>
+const TOOLS = [{"p": "factory-balancetransfer", "n": "Balance Transfer Calculator", "d": "Compare balance transfer cards and see how fast you can pay off debt.", "c": "Finance"}, {"p": "factory-boardfootcalc", "n": "Board Foot Calculator", "d": "Calculate board feet for lumber projects in seconds.", "c": "Home and DIY"}, {"p": "factory-breakeven", "n": "Break-Even Calculator", "d": "Find the break-even point for your business or product.", "c": "Finance"}, {"p": "factory-cdcalc", "n": "CD Calculator", "d": "See how much a certificate of deposit will earn over time.", "c": "Finance"}, {"p": "factory-datecalc", "n": "Date Calculator", "d": "Add or subtract days, find durations between any two dates.", "c": "Everyday Tools"}, {"p": "factory-discountcalc", "n": "Discount Calculator", "d": "Calculate sale prices, discounts, and savings instantly.", "c": "Finance"}, {"p": "factory-futurevaluecalc", "n": "Future Value Calculator", "d": "Project what your savings and investments will be worth.", "c": "Finance"}, {"p": "factory-kibbledb", "n": "KibbleDB", "d": "Look up dog food nutrition facts and compare brands.", "c": "Everyday Tools"}, {"p": "factory-macrocalc", "n": "Macro Calculator", "d": "Get your ideal protein, carb, and fat targets.", "c": "Health and Fitness"}, {"p": "factory-margincalc", "n": "Margin Calculator", "d": "Calculate profit margins and markups for any product.", "c": "Finance"}, {"p": "factory-paintcalc", "n": "Paint Calculator", "d": "Figure out exactly how much paint your room needs.", "c": "Home and DIY"}, {"p": "factory-percentchangecalc", "n": "Percent Change Calculator", "d": "Calculate percentage increase or decrease between values.", "c": "Finance"}, {"p": "factory-permitbyzip", "n": "Permit by ZIP", "d": "Look up building permit requirements by ZIP code.", "c": "Home and DIY"}, {"p": "factory-rewirecost", "n": "Rewire Cost Calculator", "d": "Estimate the cost of rewiring your home.", "c": "Home and DIY"}, {"p": "factory-smallclaimlimit", "n": "Small Claims Limit", "d": "Find small claims court limits by state.", "c": "Business"}, {"p": "factory-sqftcalc", "n": "Square Footage Calculator", "d": "Measure area for flooring, paint, and projects.", "c": "Home and DIY"}, {"p": "factory-timecardcalc", "n": "Time Card Calculator", "d": "Add up work hours and calculate pay with overtime.", "c": "Business"}, {"p": "factory-tipcalc", "n": "Tip Calculator", "d": "Split bills and calculate tips in one tap.", "c": "Finance"}, {"p": "factory-workoutplangen", "n": "Workout Plan Generator", "d": "Build a personalized workout plan in minutes.", "c": "Health and Fitness"}, {"p": "factory-pregnancycalc", "n": "Pregnancy Calculator", "d": "Track due dates and pregnancy milestones week by week.", "c": "Health and Fitness"}, {"p": "factory-airfryerconv", "n": "Air Fryer Converter", "d": "Convert oven times and temps to air fryer settings.", "c": "Everyday Tools"}, {"p": "factory-ebayfeecalc", "n": "eBay Fee Calculator", "d": "See exactly what eBay takes from every sale.", "c": "Finance"}, {"p": "factory-etsyfee", "n": "Etsy Fee Calculator", "d": "Calculate Etsy listing, transaction, and payment fees.", "c": "Finance"}, {"p": "factory-engagementrate", "n": "Engagement Rate Calculator", "d": "Measure social media engagement for any account.", "c": "Business"}, {"p": "factory-mulchcalc", "n": "Mulch Calculator", "d": "Calculate how much mulch your garden beds need.", "c": "Home and DIY"}, {"p": "factory-waterintake", "n": "Water Intake Calculator", "d": "Find your ideal daily water intake based on your body.", "c": "Health and Fitness"}, {"p": "factory-optionsprofitcalc", "n": "Options Profit Calculator", "d": "Model profit and loss for options trades.", "c": "Finance"}, {"p": "factory-sleepcalc", "n": "Sleep Calculator", "d": "Find the best bedtimes and wake times for full sleep cycles.", "c": "Health and Fitness"}, {"p": "factory-speechtime", "n": "Speech Time Calculator", "d": "Estimate how long your speech runs from word count.", "c": "Business"}];
+const main = document.getElementById('main');
+const cats = {};
+TOOLS.forEach(t => { (cats[t.c] = cats[t.c] || []).push(t); });
+Object.keys(cats).sort().forEach(c => {
+  const sec = document.createElement('section');
+  sec.className = 'cat'; sec.dataset.cat = c;
+  sec.innerHTML = '<h2>' + c + '</h2><div class="grid"></div>';
+  const grid = sec.querySelector('.grid');
+  cats[c].forEach(t => {
+    const a = document.createElement('a');
+    a.className = 'card'; a.href = 'https://' + t.p + '.pages.dev/';
+    a.dataset.name = (t.n + ' ' + t.d).toLowerCase();
+    a.innerHTML = '<h3>' + t.n + '</h3><p>' + t.d + '</p>';
+    grid.appendChild(a);
+  });
+  main.appendChild(sec);
+});
+const search = document.getElementById('search');
+const noresults = document.getElementById('noresults');
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+  let visible = 0;
+  document.querySelectorAll('.cat').forEach(sec => {
+    let catVisible = 0;
+    sec.querySelectorAll('.card').forEach(card => {
+      const show = !q || card.dataset.name.includes(q);
+      card.classList.toggle('hidden', !show);
+      if (show) { catVisible++; visible++; }
+    });
+    sec.classList.toggle('hidden', catVisible === 0);
+  });
+  noresults.style.display = visible === 0 ? 'block' : 'none';
+});
+</script>
+</body>
+</html>
