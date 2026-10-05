@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Online Calculators and Tools</title>
-<meta name="description" content="57 free calculators and tools: finance, health, home improvement, business, and everyday utilities. No signup, instant answers.">
+<meta name="description" content="80 free calculators and tools: finance, health, home improvement, business, and everyday utilities. No signup, instant answers.">
 <link rel="canonical" href="https://nehemiah313.github.io/factory-tools-directory/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Online Calculators and Tools">
-<meta property="og:description" content="47 free calculators: finance, health, home, business. No signup, instant answers.">
+<meta property="og:description" content="80 free calculators: finance, health, home, business. No signup, instant answers.">
 <meta property="og:url" content="https://nehemiah313.github.io/factory-tools-directory/">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -48,12 +48,6 @@ footer a{color:#0f2a43}
 <script>
 const TOOLS = [
  {
-  "p": "factory-balancetransfer",
-  "n": "Balance Transfer Calculator",
-  "d": "Compare balance transfer cards and see how fast you can pay off debt.",
-  "c": "Finance"
- },
- {
   "p": "factory-boardfootcalc",
   "n": "Board Foot Calculator",
   "d": "Calculate board feet for lumber projects in seconds.",
@@ -63,12 +57,6 @@ const TOOLS = [
   "p": "factory-breakeven",
   "n": "Break-Even Calculator",
   "d": "Find the break-even point for your business or product.",
-  "c": "Finance"
- },
- {
-  "p": "factory-cdcalc",
-  "n": "CD Calculator",
-  "d": "See how much a certificate of deposit will earn over time.",
   "c": "Finance"
  },
  {
@@ -102,12 +90,6 @@ const TOOLS = [
   "c": "Health and Fitness"
  },
  {
-  "p": "factory-margincalc",
-  "n": "Margin Calculator",
-  "d": "Calculate profit margins and markups for any product.",
-  "c": "Finance"
- },
- {
   "p": "factory-paintcalc",
   "n": "Paint Calculator",
   "d": "Figure out exactly how much paint your room needs.",
@@ -130,12 +112,6 @@ const TOOLS = [
   "n": "Rewire Cost Calculator",
   "d": "Estimate the cost of rewiring your home.",
   "c": "Home and DIY"
- },
- {
-  "p": "factory-smallclaimlimit",
-  "n": "Small Claims Limit",
-  "d": "Find small claims court limits by state.",
-  "c": "Business"
  },
  {
   "p": "factory-sqftcalc",
@@ -330,12 +306,6 @@ const TOOLS = [
   "c": "Home and DIY"
  },
  {
-  "p": "factory-bahcalc",
-  "n": "BAH Calculator",
-  "d": "Look up your Basic Allowance for Housing by rank, location, and dependents.",
-  "c": "Finance"
- },
- {
   "p": "factory-salaryhourly",
   "n": "Salary to Hourly Calculator",
   "d": "Convert salary to hourly wage and back, with overtime.",
@@ -347,29 +317,6 @@ const TOOLS = [
   "d": "Size wire for runs: voltage drop in volts and percent, or the gauge you need.",
   "c": "Home and DIY"
  },
- {
-  "p": "factory-firewoodcalc",
-  "n": "Firewood Calculator",
-  "d": "Convert firewood stacks to cords and face cords, and compare cost per cord.",
-  "c": "Home and DIY"
- }
-];
-const main = document.getElementById('main');
-const cats = {};
-TOOLS.forEach(t => { (cats[t.c] = cats[t.c] || []).push(t); });
-Object.keys(cats).sort().forEach(c => {
-  const sec = document.createElement('section');
-  sec.className = 'cat'; sec.dataset.cat = c;
-  sec.innerHTML = '<h2>' + c + '</h2><div class="grid"></div>';
-  const grid = sec.querySelector('.grid');
-  cats[c].forEach(t => {
-    const a = document.createElement('a');
-    a.className = 'card'; a.href = 'https://' + t.p + '.pages.dev/';
-    a.dataset.name = (t.n + ' ' + t.d).toLowerCase();
-    a.innerHTML = '<h3>' + t.n + '</h3><p>' + t.d + '</p>';
-    grid.appendChild(a);
-  });
-  main.appendChild(sec);
  {
   "p": "factory-gpacalc",
   "n": "GPA Calculator",
@@ -544,6 +491,60 @@ Object.keys(cats).sort().forEach(c => {
   "d": "Plan monthly spending with the 50/30/20 rule.",
   "c": "Finance"
  },
+ {
+  "p": "factory-refinancecalc",
+  "n": "Refinance Calculator",
+  "d": "Find out if refinancing your mortgage saves money and when you break even.",
+  "c": "Finance"
+ },
+ {
+  "p": "factory-homeequitycalc",
+  "n": "Home Equity Calculator",
+  "d": "See how much home equity you have and compare HELOC vs home equity loan options.",
+  "c": "Finance"
+ },
+ {
+  "p": "factory-lifeinsurancecalc",
+  "n": "Life Insurance Calculator",
+  "d": "Calculate how much life insurance you need and compare term vs whole life costs.",
+  "c": "Finance"
+ },
+ {
+  "p": "factory-solarcalc",
+  "n": "Solar Panel Calculator",
+  "d": "Estimate solar panel costs, how many panels you need, and whether solar is worth it.",
+  "c": "Home and DIY"
+ },
+ {
+  "p": "factory-bathroomcalc",
+  "n": "Bathroom Remodel Cost Calculator",
+  "d": "Estimate bathroom remodel costs, timelines, and walk-in shower prices.",
+  "c": "Home and DIY"
+ },
+ {
+  "p": "factory-costoflivingcalc",
+  "n": "Cost of Living Calculator",
+  "d": "Compare cost of living by city, estimate moving costs, and compare renting vs buying.",
+  "c": "Everyday Tools"
+ }
+];
+const main = document.getElementById('main');
+const cats = {};
+TOOLS.forEach(t => { (cats[t.c] = cats[t.c] || []).push(t); });
+Object.keys(cats).sort().forEach(c => {
+  const sec = document.createElement('section');
+  sec.className = 'cat'; sec.dataset.cat = c;
+  sec.innerHTML = '<h2>' + c + '</h2><div class="grid"></div>';
+  const grid = sec.querySelector('.grid');
+  cats[c].forEach(t => {
+    const a = document.createElement('a');
+    a.className = 'card'; a.href = 'https://' + t.p + '.pages.dev/';
+    a.dataset.name = (t.n + ' ' + t.d).toLowerCase();
+    a.innerHTML = '<h3>' + t.n + '</h3><p>' + t.d + '</p>';
+    grid.appendChild(a);
+  });
+  main.appendChild(sec);
+
 });
 const search = document.getElementById('search');
 const noresults = document.getElementById('noresults');
