@@ -264,12 +264,6 @@ const TOOLS = [
   "c": "Business"
  },
  {
-  "p": "factory-payraise",
-  "n": "Pay Raise Calculator",
-  "d": "See what a raise means for your salary and paycheck.",
-  "c": "Finance"
- },
- {
   "p": "factory-topsoilcalc",
   "n": "Topsoil Calculator",
   "d": "Calculate cubic yards and bags of topsoil for any project.",
@@ -324,12 +318,6 @@ const TOOLS = [
   "c": "Everyday Tools"
  },
  {
-  "p": "factory-tdeecalc",
-  "n": "TDEE Calculator",
-  "d": "Calculate your total daily energy expenditure and calorie targets.",
-  "c": "Health and Fitness"
- },
- {
   "p": "factory-poolchemcalc",
   "n": "Pool Chemical Calculator",
   "d": "Get exact chemical doses to balance your pool water.",
@@ -340,12 +328,6 @@ const TOOLS = [
   "n": "Drywall Calculator",
   "d": "Estimate drywall sheets, screws, and compound for any room.",
   "c": "Home and DIY"
- },
- {
-  "p": "factory-salaryhourly",
-  "n": "Salary to Hourly Calculator",
-  "d": "Convert salary to hourly wage and back, with overtime.",
-  "c": "Finance"
  },
  {
   "p": "factory-voltagedrop",
@@ -414,12 +396,6 @@ const TOOLS = [
   "c": "Everyday Tools"
  },
  {
-  "p": "factory-bodyfatcalc",
-  "n": "Body Fat Calculator",
-  "d": "US Navy tape method estimate with category bands.",
-  "c": "Health and Fitness"
- },
- {
   "p": "factory-closingcostcalc",
   "n": "Closing Cost Calculator",
   "d": "Line-item estimate of buyer closing costs by loan type.",
@@ -460,12 +436,6 @@ const TOOLS = [
   "n": "Unit Converter",
   "d": "Length, weight, temperature, and volume, metric to imperial.",
   "c": "Everyday Tools"
- },
- {
-  "p": "factory-inflationcalc",
-  "n": "Inflation Calculator",
-  "d": "See what inflation does to your money over any time span.",
-  "c": "Finance"
  },
  {
   "p": "factory-retirementcalc",
@@ -525,12 +495,6 @@ const TOOLS = [
   "p": "factory-budgetcalc",
   "n": "Budget Calculator",
   "d": "Plan monthly spending with the 50/30/20 rule.",
-  "c": "Finance"
- },
- {
-  "p": "factory-refinancecalc",
-  "n": "Refinance Calculator",
-  "d": "Find out if refinancing your mortgage saves money and when you break even.",
   "c": "Finance"
  },
  {
@@ -617,6 +581,42 @@ Object.keys(cats).sort().forEach(c => {
   });
   main.appendChild(sec);
 
+ {
+  "p": "factory-sbaloan",
+  "n": "SBA 7(a) Loan Calculator",
+  "d": "Monthly payment, guarantee fee, and total cost of an SBA 7(a) loan.",
+  "c": "Business"
+ },
+ {
+  "p": "factory-payrolltax",
+  "n": "Employer Payroll Tax Calculator",
+  "d": "True cost per employee: Social Security, Medicare, FUTA, and SUTA.",
+  "c": "Business"
+ },
+ {
+  "p": "factory-salestaxzip",
+  "n": "Sales Tax by ZIP Lookup",
+  "d": "2026 sales tax rates by state, with a full downloadable table.",
+  "c": "Business"
+ },
+ {
+  "p": "factory-ccprocessing",
+  "n": "Credit Card Processing Fee Calculator",
+  "d": "Compare Square, Stripe, interchange-plus, and subscription pricing.",
+  "c": "Business"
+ },
+ {
+  "p": "factory-dscr",
+  "n": "DSCR Calculator",
+  "d": "Debt service coverage ratio for investment property loans.",
+  "c": "Finance"
+ },
+ {
+  "p": "factory-cashoncash",
+  "n": "Cash-on-Cash Return Calculator",
+  "d": "Annual cash yield on your invested cash for rental property.",
+  "c": "Finance"
+ },
 });
 const search = document.getElementById('search');
 const noresults = document.getElementById('noresults');
