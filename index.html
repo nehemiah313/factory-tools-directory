@@ -47,492 +47,98 @@ footer a{color:#0f2a43}
 </footer>
 <script>
 const TOOLS = [
-  {
-  "p": "factory-boardfootcalc",
-  "n": "Board Foot Calculator",
-  "d": "Calculate board feet for lumber projects in seconds.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-datecalc",
-  "n": "Date Calculator",
-  "d": "Add or subtract days, find durations between any two dates.",
-  "c": "Everyday Tools"
- },
-
-  {
-  "p": "factory-kibbledb",
-  "n": "KibbleDB",
-  "d": "Look up dog food nutrition facts and compare brands.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-macrocalc",
-  "n": "Macro Calculator",
-  "d": "Get your ideal protein, carb, and fat targets.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-paintcalc",
-  "n": "Paint Calculator",
-  "d": "Figure out exactly how much paint your room needs.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-permitbyzip",
-  "n": "Permit by ZIP",
-  "d": "Look up building permit requirements by ZIP code.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-rewirecost",
-  "n": "Rewire Cost Calculator",
-  "d": "Estimate the cost of rewiring your home.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-tipcalc",
-  "n": "Tip Calculator",
-  "d": "Split bills and calculate tips in one tap.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-workoutplangen",
-  "n": "Workout Plan Generator",
-  "d": "Build a personalized workout plan in minutes.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-pregnancycalc",
-  "n": "Pregnancy Calculator",
-  "d": "Track due dates and pregnancy milestones week by week.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-ebayfeecalc",
-  "n": "eBay Fee Calculator",
-  "d": "See exactly what eBay takes from every sale.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-etsyfee",
-  "n": "Etsy Fee Calculator",
-  "d": "Calculate Etsy listing, transaction, and payment fees.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-engagementrate",
-  "n": "Engagement Rate Calculator",
-  "d": "Measure social media engagement for any account.",
-  "c": "Business"
- },
-  {
-  "p": "factory-mulchcalc",
-  "n": "Mulch Calculator",
-  "d": "Calculate how much mulch your garden beds need.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-waterintake",
-  "n": "Water Intake Calculator",
-  "d": "Find your ideal daily water intake based on your body.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-optionsprofitcalc",
-  "n": "Options Profit Calculator",
-  "d": "Model profit and loss for options trades.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-ptocalc",
-  "n": "PTO Calculator",
-  "d": "Track PTO accrual and project your year-end time off balance.",
-  "c": "Business"
- },
-  {
-  "p": "factory-barcodegen",
-  "n": "Barcode Generator",
-  "d": "Generate Code 128, Code 39, EAN-13, and UPC-A barcodes free.",
-  "c": "Business"
- },
-  {
-  "p": "factory-payraise",
-  "n": "Pay Raise Calculator",
-  "d": "See what a raise means for your salary and paycheck.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-topsoilcalc",
-  "n": "Topsoil Calculator",
-  "d": "Calculate cubic yards and bags of topsoil for any project.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-poolvolume",
-  "n": "Pool Volume Calculator",
-  "d": "Find your pool volume in gallons for accurate chemical dosing.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-tilecalc",
-  "n": "Tile Calculator",
-  "d": "Calculate tiles and boxes needed, plus waste allowance.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-stripefee",
-  "n": "Stripe Fee Calculator",
-  "d": "See exactly what Stripe takes from every payment.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-caprate",
-  "n": "Cap Rate Calculator",
-  "d": "Calculate capitalization rates for rental property investments.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-blockcalc",
-  "n": "Concrete Block Calculator",
-  "d": "Estimate concrete blocks and mortar for any wall project.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-percentcalc",
-  "n": "Percentage Calculator",
-  "d": "Solve any percentage problem: of, is-what-percent, or change.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-dogfoodcalc",
-  "n": "Dog Food Calculator",
-  "d": "Find exactly how much to feed your dog each day.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-tdeecalc",
-  "n": "TDEE Calculator",
-  "d": "Calculate your total daily energy expenditure and calorie targets.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-salaryhourly",
-  "n": "Salary to Hourly Calculator",
-  "d": "Convert salary to hourly wage and back, with overtime.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-voltagedrop",
-  "n": "Voltage Drop Calculator",
-  "d": "Size wire for runs: voltage drop in volts and percent, or the gauge you need.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-concretecalc",
-  "n": "Concrete Calculator",
-  "d": "Cubic yards and bag counts for slabs, footings, and columns.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-onerepmax",
-  "n": "One Rep Max Calculator",
-  "d": "Estimate your 1RM from any set, with training percentages.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-mortgagepayoff",
-  "n": "Mortgage Payoff Calculator",
-  "d": "Extra payments, payoff date, and interest saved.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-agecalc",
-  "n": "Age Calculator",
-  "d": "Exact age in years, months, and days, plus days lived.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-finalgradecalc",
-  "n": "Final Grade Calculator",
-  "d": "The exact final exam score you need for your target grade.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-tiresizecalc",
-  "n": "Tire Size Calculator",
-  "d": "Compare tire sizes: diameter, speedometer error, revs per mile.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-bodyfatcalc",
-  "n": "Body Fat Calculator",
-  "d": "US Navy tape method estimate with category bands.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-closingcostcalc",
-  "n": "Closing Cost Calculator",
-  "d": "Line-item estimate of buyer closing costs by loan type.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-randomnumber",
-  "n": "Random Number Generator",
-  "d": "Pick random numbers in any range, with names, wheels, and coin flips.",
-  "c": "Everyday Tools"
- },
-
-  {
-  "p": "factory-ovulationcalc",
-  "n": "Ovulation Calculator",
-  "d": "Fertile window, ovulation date, and next period from your cycle.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-unitconverter",
-  "n": "Unit Converter",
-  "d": "Length, weight, temperature, and volume, metric to imperial.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-inflationcalc",
-  "n": "Inflation Calculator",
-  "d": "See what inflation does to your money over any time span.",
-  "c": "Finance"
- },
-
-  {
-  "p": "factory-childsupportcalc",
-  "n": "Child Support Calculator",
-  "d": "Estimate monthly support with a simplified income-shares model.",
-  "c": "Everyday Tools"
- },
-
-  {
-  "p": "factory-pacecalc",
-  "n": "Running Pace Calculator",
-  "d": "Pace, finish time, and distance for runners, per mile or km.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-homeaffordcalc",
-  "n": "Home Affordability Calculator",
-  "d": "How much house your income, debts, and down payment can buy.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-annuitycalc",
-  "n": "Annuity Calculator",
-  "d": "Monthly payouts and total return on any annuity purchase.",
-  "c": "Finance"
- },
-
-
-  {
-  "p": "factory-refinancecalc",
-  "n": "Refinance Calculator",
-  "d": "Find out if refinancing your mortgage saves money and when you break even.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-homeequitycalc",
-  "n": "Home Equity Calculator",
-  "d": "See how much home equity you have and compare HELOC vs home equity loan options.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-lifeinsurancecalc",
-  "n": "Life Insurance Calculator",
-  "d": "Calculate how much life insurance you need and compare term vs whole life costs.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-solarcalc",
-  "n": "Solar Panel Calculator",
-  "d": "Estimate solar panel costs, how many panels you need, and whether solar is worth it.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-bathroomcalc",
-  "n": "Bathroom Remodel Cost Calculator",
-  "d": "Estimate bathroom remodel costs, timelines, and walk-in shower prices.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-costoflivingcalc",
-  "n": "Cost of Living Calculator",
-  "d": "Compare cost of living by city, estimate moving costs, and compare renting vs buying.",
-  "c": "Everyday Tools"
- },
-  {
-  "p": "factory-amazonfba",
-  "n": "Amazon FBA Fee Calculator",
-  "d": "Estimate Amazon FBA fees and true profit per unit.",
-  "c": "Business"
- },
-  {
-  "p": "factory-shopifyfee",
-  "n": "Shopify Fee Calculator",
-  "d": "Compare Shopify plans and transaction fees.",
-  "c": "Business"
- },
-  {
-  "p": "factory-uberdriver",
-  "n": "Uber Driver Pay Calculator",
-  "d": "Gross pay vs true net hourly pay for drivers.",
-  "c": "Business"
- },
-  {
-  "p": "factory-poolservicecost",
-  "n": "Pool Service Cost Calculator",
-  "d": "Compare pro pool service vs DIY costs.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-daycarecost",
-  "n": "Daycare Cost Calculator",
-  "d": "Estimate child care costs by state, care type, and children.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-petinsurance",
-  "n": "Pet Insurance Cost Calculator",
-  "d": "Estimate monthly pet insurance premiums for dogs and cats.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-ltccost",
-  "n": "Long-Term Care Cost Calculator",
-  "d": "Estimate nursing home and long-term care costs.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-medicarepartd",
-  "n": "Medicare Part D Cost Calculator",
-  "d": "Estimate 2026 Medicare drug plan costs and the $2,100 cap.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-cobracost",
-  "n": "COBRA Cost Calculator",
-  "d": "Estimate COBRA health premiums after job loss.",
-  "c": "Health and Fitness"
- },
-  {
-  "p": "factory-disabilityinsurance",
-  "n": "Disability Insurance Cost Calculator",
-  "d": "Estimate disability insurance benefits and premiums.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-pointsvsrate",
-  "n": "Mortgage Points vs Rate Calculator",
-  "d": "Should you buy mortgage points? Break-even math on buying down your rate.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-pmiremoval",
-  "n": "PMI Removal Calculator",
-  "d": "When your PMI ends: the 80% request date and 78% automatic end.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-studentrefi",
-  "n": "Student Loan Refinance Calculator",
-  "d": "Compare refinance offers: payment, total interest, and what you give up.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-hysarates",
-  "n": "High-Yield Savings Rates",
-  "d": "Typical HYSA rates by account type, growth projector, and CSV download.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-macrs",
-  "n": "MACRS Depreciation Calculator",
-  "d": "Build year-by-year MACRS depreciation schedules with 2026 bonus and Section 179.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-milestax",
-  "n": "Mileage Tax Deduction Calculator",
-  "d": "Deduct business miles at the 2026 IRS split-year rates.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-taxpenalty",
-  "n": "IRS Tax Penalty Calculator",
-  "d": "Estimate failure-to-file and failure-to-pay penalties plus interest.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-severancecalc",
-  "n": "Severance Pay Calculator",
-  "d": "Model your severance package, withholding, and take-home pay.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-hsacalc",
-  "n": "HSA Contribution Calculator",
-  "d": "Find your 2026 HSA contribution room and tax savings.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-1031exchange",
-  "n": "1031 Exchange Calculator",
-  "d": "Model deferred gain, boot, and deadlines for a 1031 exchange.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-gapinsurance",
-  "n": "GAP Insurance Cost Calculator",
-  "d": "Estimate your gap exposure and compare GAP costs by source.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-autodeductible",
-  "n": "Auto Insurance Deductible Calculator",
-  "d": "$500 vs $1,000: premium savings, risk, and break-even years.",
-  "c": "Finance"
- },
-  {
-  "p": "factory-heatpump",
-  "n": "Heat Pump Cost Estimator",
-  "d": "Estimate installed heat pump cost, sizing, and payback.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-evcharger",
-  "n": "EV Charger Installation Cost Estimator",
-  "d": "Price a Level 2 home charger install line by line.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-frenchdrain",
-  "n": "French Drain Cost Estimator",
-  "d": "Estimate French drain cost per linear foot by drain type.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-sidingcost",
-  "n": "Siding Replacement Cost Estimator",
-  "d": "Price siding replacement per square foot by material.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-electricalpanel",
-  "n": "Electrical Panel Upgrade Cost Estimator",
-  "d": "Estimate panel upgrade cost by amperage and scope.",
-  "c": "Home and DIY"
- },
-  {
-  "p": "factory-chimneycost",
-  "n": "Chimney Repair Cost Estimator",
-  "d": "Price chimney repairs by type: liner, crown, tuckpointing.",
-  "c": "Home and DIY"
- },
+  {"p": "factory-1031exchange", "n": "1031 Exchange Calculator", "d": "Model deferred gain, boot, and deadlines for a 1031 exchange.", "c": "Finance"},
+  {"p": "factory-529calc", "n": "529 Plan Calculator", "d": "College savings growth projector.", "c": "Finance"},
+  {"p": "factory-acasubsidy", "n": "ACA Subsidy Calculator", "d": "Estimate your 2026 ACA premium tax credit.", "c": "Finance"},
+  {"p": "factory-alimonycalc", "n": "Alimony Calculator", "d": "Estimate monthly spousal support.", "c": "Finance"},
+  {"p": "factory-amazonfba", "n": "Amazon FBA Fee Calculator", "d": "Estimate Amazon FBA fees and true profit per unit.", "c": "Business"},
+  {"p": "factory-annuitycalc", "n": "Annuity Calculator", "d": "Monthly payouts and total return on any annuity purchase.", "c": "Finance"},
+  {"p": "factory-autodeductible", "n": "Auto Insurance Deductible Calculator", "d": "$500 vs $1,000: premium savings, risk, and break-even years.", "c": "Finance"},
+  {"p": "factory-bankruptcycost", "n": "Bankruptcy Cost", "d": "Chapter 7 vs 13 filing costs compared.", "c": "Finance"},
+  {"p": "factory-barcodegen", "n": "Barcode Generator", "d": "Generate Code 128, Code 39, EAN-13, and UPC-A barcodes free.", "c": "Business"},
+  {"p": "factory-bathroomcalc", "n": "Bathroom Remodel Cost Calculator", "d": "Estimate bathroom remodel costs, timelines, and walk-in shower prices.", "c": "Home and DIY"},
+  {"p": "factory-blockcalc", "n": "Concrete Block Calculator", "d": "Estimate concrete blocks and mortar for any wall project.", "c": "Home and DIY"},
+  {"p": "factory-boardfootcalc", "n": "Board Foot Calculator", "d": "Calculate board feet for lumber projects in seconds.", "c": "Home and DIY"},
+  {"p": "factory-brscalc", "n": "BRS Retirement Calculator", "d": "Blended Retirement System vs legacy: which pays more?", "c": "Finance"},
+  {"p": "factory-caprate", "n": "Cap Rate Calculator", "d": "Calculate capitalization rates for rental property investments.", "c": "Finance"},
+  {"p": "factory-cashoncash", "n": "Cash-on-Cash Return", "d": "Rental cash-on-cash return calculator.", "c": "Business"},
+  {"p": "factory-ccprocessing", "n": "Card Processing Fees", "d": "Compare Square, Stripe, and interchange-plus.", "c": "Business"},
+  {"p": "factory-childsupportcalc", "n": "Child Support Calculator", "d": "Estimate monthly support with a simplified income-shares model.", "c": "Everyday Tools"},
+  {"p": "factory-chimneycost", "n": "Chimney Repair Cost Estimator", "d": "Price chimney repairs by type: liner, crown, tuckpointing.", "c": "Home and DIY"},
+  {"p": "factory-closingcostcalc", "n": "Closing Cost Calculator", "d": "Line-item estimate of buyer closing costs by loan type.", "c": "Finance"},
+  {"p": "factory-cobracost", "n": "COBRA Cost Calculator", "d": "Estimate COBRA health premiums after job loss.", "c": "Health and Fitness"},
+  {"p": "factory-concretecalc", "n": "Concrete Calculator", "d": "Cubic yards and bag counts for slabs, footings, and columns.", "c": "Home and DIY"},
+  {"p": "factory-costoflivingcalc", "n": "Cost of Living Calculator", "d": "Compare cost of living by city, estimate moving costs, and compare renting vs buying.", "c": "Everyday Tools"},
+  {"p": "factory-ctccalc", "n": "Child Tax Credit Calculator", "d": "2026 child tax credit: $2,200 per child.", "c": "Finance"},
+  {"p": "factory-daycarecost", "n": "Daycare Cost Calculator", "d": "Estimate child care costs by state, care type, and children.", "c": "Health and Fitness"},
+  {"p": "factory-disabilityinsurance", "n": "Disability Insurance Cost Calculator", "d": "Estimate disability insurance benefits and premiums.", "c": "Finance"},
+  {"p": "factory-divorcecost", "n": "Divorce Cost Calculator", "d": "Divorce costs: fees, attorneys, ranges.", "c": "Finance"},
+  {"p": "factory-dogfoodcalc", "n": "Dog Food Calculator", "d": "Find exactly how much to feed your dog each day.", "c": "Everyday Tools"},
+  {"p": "factory-dscr", "n": "DSCR Calculator", "d": "Debt service coverage ratio for investors.", "c": "Business"},
+  {"p": "factory-ebayfeecalc", "n": "eBay Fee Calculator", "d": "See exactly what eBay takes from every sale.", "c": "Finance"},
+  {"p": "factory-eitccalc", "n": "EITC Calculator", "d": "Earned Income Tax Credit estimator for 2026.", "c": "Finance"},
+  {"p": "factory-electricalpanel", "n": "Electrical Panel Upgrade Cost Estimator", "d": "Estimate panel upgrade cost by amperage and scope.", "c": "Home and DIY"},
+  {"p": "factory-engagementrate", "n": "Engagement Rate Calculator", "d": "Measure social media engagement for any account.", "c": "Business"},
+  {"p": "factory-etsyfee", "n": "Etsy Fee Calculator", "d": "Calculate Etsy listing, transaction, and payment fees.", "c": "Finance"},
+  {"p": "factory-evcharger", "n": "EV Charger Installation Cost Estimator", "d": "Price a Level 2 home charger install line by line.", "c": "Home and DIY"},
+  {"p": "factory-fencecost", "n": "Fence Installation Cost", "d": "Fence cost by material and linear feet.", "c": "Home and DIY"},
+  {"p": "factory-ferscalc", "n": "FERS Pension Calculator", "d": "Federal pension estimate with OPM formulas.", "c": "Finance"},
+  {"p": "factory-frenchdrain", "n": "French Drain Cost Estimator", "d": "Estimate French drain cost per linear foot by drain type.", "c": "Home and DIY"},
+  {"p": "factory-gapinsurance", "n": "GAP Insurance Cost Calculator", "d": "Estimate your gap exposure and compare GAP costs by source.", "c": "Finance"},
+  {"p": "factory-heatpump", "n": "Heat Pump Cost Estimator", "d": "Estimate installed heat pump cost, sizing, and payback.", "c": "Home and DIY"},
+  {"p": "factory-homeaffordcalc", "n": "Home Affordability Calculator", "d": "How much house your income, debts, and down payment can buy.", "c": "Finance"},
+  {"p": "factory-homeequitycalc", "n": "Home Equity Calculator", "d": "See how much home equity you have and compare HELOC vs home equity loan options.", "c": "Finance"},
+  {"p": "factory-homewarranty", "n": "Home Warranty Cost", "d": "Compare home warranty plan costs.", "c": "Home and DIY"},
+  {"p": "factory-hsacalc", "n": "HSA Contribution Calculator", "d": "Find your 2026 HSA contribution room and tax savings.", "c": "Finance"},
+  {"p": "factory-hvacreplacement", "n": "HVAC Replacement Cost", "d": "HVAC system replacement estimates.", "c": "Home and DIY"},
+  {"p": "factory-hysarates", "n": "High-Yield Savings Rates", "d": "Typical HYSA rates by account type, growth projector, and CSV download.", "c": "Finance"},
+  {"p": "factory-kibbledb", "n": "KibbleDB", "d": "Look up dog food nutrition facts and compare brands.", "c": "Everyday Tools"},
+  {"p": "factory-lemonlaw", "n": "Lemon Law Checker", "d": "Does your car qualify? Buyback estimate.", "c": "Finance"},
+  {"p": "factory-lifeinsurancecalc", "n": "Life Insurance Calculator", "d": "Calculate how much life insurance you need and compare term vs whole life costs.", "c": "Finance"},
+  {"p": "factory-ltccost", "n": "Long-Term Care Cost Calculator", "d": "Estimate nursing home and long-term care costs.", "c": "Finance"},
+  {"p": "factory-macrs", "n": "MACRS Depreciation Calculator", "d": "Build year-by-year MACRS depreciation schedules with 2026 bonus and Section 179.", "c": "Finance"},
+  {"p": "factory-medicarepartd", "n": "Medicare Part D Cost Calculator", "d": "Estimate 2026 Medicare drug plan costs and the $2,100 cap.", "c": "Health and Fitness"},
+  {"p": "factory-milestax", "n": "Mileage Tax Deduction Calculator", "d": "Deduct business miles at the 2026 IRS split-year rates.", "c": "Finance"},
+  {"p": "factory-mortgagepayoff", "n": "Mortgage Payoff Calculator", "d": "Extra payments, payoff date, and interest saved.", "c": "Finance"},
+  {"p": "factory-mulchcalc", "n": "Mulch Calculator", "d": "Calculate how much mulch your garden beds need.", "c": "Home and DIY"},
+  {"p": "factory-onerepmax", "n": "One Rep Max Calculator", "d": "Estimate your 1RM from any set, with training percentages.", "c": "Health and Fitness"},
+  {"p": "factory-optionsprofitcalc", "n": "Options Profit Calculator", "d": "Model profit and loss for options trades.", "c": "Finance"},
+  {"p": "factory-overtimecalc", "n": "Overtime Pay Calculator", "d": "Overtime pay with FLSA rules.", "c": "Finance"},
+  {"p": "factory-pacecalc", "n": "Running Pace Calculator", "d": "Pace, finish time, and distance for runners, per mile or km.", "c": "Health and Fitness"},
+  {"p": "factory-paintcalc", "n": "Paint Calculator", "d": "Figure out exactly how much paint your room needs.", "c": "Home and DIY"},
+  {"p": "factory-payrolltax", "n": "Payroll Tax Calculator", "d": "Employer payroll tax with 2026 rates.", "c": "Business"},
+  {"p": "factory-permitbyzip", "n": "Permit by ZIP", "d": "Look up building permit requirements by ZIP code.", "c": "Home and DIY"},
+  {"p": "factory-petinsurance", "n": "Pet Insurance Cost Calculator", "d": "Estimate monthly pet insurance premiums for dogs and cats.", "c": "Health and Fitness"},
+  {"p": "factory-pmiremoval", "n": "PMI Removal Calculator", "d": "When your PMI ends: the 80% request date and 78% automatic end.", "c": "Finance"},
+  {"p": "factory-pointsvsrate", "n": "Mortgage Points vs Rate Calculator", "d": "Should you buy mortgage points? Break-even math on buying down your rate.", "c": "Finance"},
+  {"p": "factory-poolservicecost", "n": "Pool Service Cost Calculator", "d": "Compare pro pool service vs DIY costs.", "c": "Home and DIY"},
+  {"p": "factory-poolvolume", "n": "Pool Volume Calculator", "d": "Find your pool volume in gallons for accurate chemical dosing.", "c": "Home and DIY"},
+  {"p": "factory-probatecost", "n": "Probate Cost Calculator", "d": "Probate costs by estate value.", "c": "Finance"},
+  {"p": "factory-pslfcalc", "n": "PSLF Calculator", "d": "Track Public Service Loan Forgiveness progress.", "c": "Finance"},
+  {"p": "factory-ptocalc", "n": "PTO Calculator", "d": "Track PTO accrual and project your year-end time off balance.", "c": "Business"},
+  {"p": "factory-rewirecost", "n": "Rewire Cost Calculator", "d": "Estimate the cost of rewiring your home.", "c": "Home and DIY"},
+  {"p": "factory-roofcost", "n": "Roof Replacement Cost", "d": "Roof cost by material and square footage.", "c": "Home and DIY"},
+  {"p": "factory-salestaxzip", "n": "Sales Tax by ZIP", "d": "Look up sales tax rates by ZIP code.", "c": "Business"},
+  {"p": "factory-sbaloan", "n": "SBA Loan Calculator", "d": "SBA 7(a) payments and guarantee fees.", "c": "Business"},
+  {"p": "factory-severancecalc", "n": "Severance Pay Calculator", "d": "Model your severance package, withholding, and take-home pay.", "c": "Finance"},
+  {"p": "factory-shopifyfee", "n": "Shopify Fee Calculator", "d": "Compare Shopify plans and transaction fees.", "c": "Business"},
+  {"p": "factory-sidingcost", "n": "Siding Replacement Cost Estimator", "d": "Price siding replacement per square foot by material.", "c": "Home and DIY"},
+  {"p": "factory-solarcalc", "n": "Solar Panel Calculator", "d": "Estimate solar panel costs, how many panels you need, and whether solar is worth it.", "c": "Home and DIY"},
+  {"p": "factory-ssbreakeven", "n": "Social Security Breakeven", "d": "When does delaying Social Security pay off?", "c": "Finance"},
+  {"p": "factory-stripefee", "n": "Stripe Fee Calculator", "d": "See exactly what Stripe takes from every payment.", "c": "Finance"},
+  {"p": "factory-studentrefi", "n": "Student Loan Refinance Calculator", "d": "Compare refinance offers: payment, total interest, and what you give up.", "c": "Finance"},
+  {"p": "factory-taxpenalty", "n": "IRS Tax Penalty Calculator", "d": "Estimate failure-to-file and failure-to-pay penalties plus interest.", "c": "Finance"},
+  {"p": "factory-tilecalc", "n": "Tile Calculator", "d": "Calculate tiles and boxes needed, plus waste allowance.", "c": "Home and DIY"},
+  {"p": "factory-tiresizecalc", "n": "Tire Size Calculator", "d": "Compare tire sizes: diameter, speedometer error, revs per mile.", "c": "Everyday Tools"},
+  {"p": "factory-topsoilcalc", "n": "Topsoil Calculator", "d": "Calculate cubic yards and bags of topsoil for any project.", "c": "Home and DIY"},
+  {"p": "factory-trafficticket", "n": "Traffic Ticket Cost", "d": "Fine plus insurance increase: the true cost.", "c": "Finance"},
+  {"p": "factory-treeremoval", "n": "Tree Removal Cost", "d": "Tree removal estimates by size and location.", "c": "Home and DIY"},
+  {"p": "factory-tspcalc", "n": "TSP Calculator", "d": "Thrift Savings Plan growth with agency match.", "c": "Finance"},
+  {"p": "factory-uberdriver", "n": "Uber Driver Pay Calculator", "d": "Gross pay vs true net hourly pay for drivers.", "c": "Business"},
+  {"p": "factory-unemploymentcalc", "n": "Unemployment Benefits Calculator", "d": "Estimate weekly benefits by state.", "c": "Finance"},
+  {"p": "factory-vadisability", "n": "VA Disability Calculator", "d": "Estimate your VA combined rating and monthly pay.", "c": "Finance"},
+  {"p": "factory-voltagedrop", "n": "Voltage Drop Calculator", "d": "Size wire for runs: voltage drop in volts and percent, or the gauge you need.", "c": "Home and DIY"},
+  {"p": "factory-windowcost", "n": "Window Replacement Cost", "d": "Window costs by type and count.", "c": "Home and DIY"}
 ];
 const main = document.getElementById('main');
 const cats = {};
